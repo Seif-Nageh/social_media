@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:social_media/pages/login_page.dart';
+import 'package:social_media/styles/theme_colors.dart';
 
 void main() {
   runApp(const MyApp());
@@ -11,20 +12,11 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Social Media',
-      home: HomePage(),
-    );
-  }
-}
-
-class HomePage extends StatelessWidget {
-  const HomePage({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: Colors.blue[900],
-      body: LoginPage(),
+      theme: ThemeData(
+        fontFamily: "Urbanist",
+        scaffoldBackgroundColor: ThemeColors.background,
+      ),
+      home: LoginPage(),
     );
   }
 }
