@@ -39,7 +39,9 @@ class LoginPage extends StatelessWidget {
                   decoration: InputDecoration(
                     hintText: "seif.nageh@gmail.com",
                     border: const OutlineInputBorder(
-                      borderRadius: BorderRadius.all(Radius.circular(12)),
+                      borderRadius: BorderRadius.all(
+                        Radius.circular(12),
+                      ),
                     ),
                     filled: true,
                     fillColor: ThemeColors.white.withOpacity(0.5),
@@ -77,7 +79,9 @@ class LoginPage extends StatelessWidget {
                   width: MediaQuery.of(context).size.width / 3 * 2,
                   height: 40,
                   child: ElevatedButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.of(context).pushReplacementNamed("/main");
+                    },
                     style: ElevatedButton.styleFrom(
                       backgroundColor: ThemeColors.primary,
                       foregroundColor: ThemeColors.black,
@@ -88,7 +92,9 @@ class LoginPage extends StatelessWidget {
                 const Spacer(),
                 Text(
                   "Or sign in with",
-                  style: TextStyle(color: ThemeColors.white.withOpacity(0.7)),
+                  style: TextStyle(
+                    color: ThemeColors.white.withOpacity(0.7),
+                  ),
                 ),
                 const SizedBox(
                   height: 16,
@@ -111,7 +117,9 @@ class LoginPage extends StatelessWidget {
                         SizedBox(
                           height: 40,
                           width: 40,
-                          child: Image.asset("assets/images/google.png"),
+                          child: Image.asset(
+                            "assets/images/google.png",
+                          ),
                         ),
                         const SizedBox(width: 8),
                         const Text(
@@ -142,9 +150,13 @@ class LoginPage extends StatelessWidget {
                         SizedBox(
                           height: 40,
                           width: 40,
-                          child: Image.asset("assets/images/facebook.png"),
+                          child: Image.asset(
+                            "assets/images/facebook.png",
+                          ),
                         ),
-                        const SizedBox(width: 8),
+                        const SizedBox(
+                          width: 8,
+                        ),
                         const Text("Login with Facebook"),
                       ],
                     ),

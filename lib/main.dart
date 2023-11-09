@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:social_media/pages/login_page.dart';
+import 'package:social_media/pages/main_page.dart';
 import 'package:social_media/styles/theme_colors.dart';
 
 void main() {
@@ -15,8 +16,13 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         fontFamily: "Urbanist",
         scaffoldBackgroundColor: ThemeColors.background,
+        brightness: Brightness.dark,
       ),
-      home: LoginPage(),
+      initialRoute: "/",
+      routes: {
+        "/": (context) => const LoginPage(),
+        "/main": (context) => const MainPage(),
+      },
     );
   }
 }
